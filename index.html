@@ -2,137 +2,338 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>PlovDev</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>Главная</title>
+    <style>
+        body {
+    background-image: url('https://img.freepik.com/free-photo/coconut-palm-tree-beach-sea_74190-6580.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: helvetica;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+header {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.tur {
+    padding: 0;
+    margin: 0;
+    font-size: 6em;
+    font-weight: bold;
+    text-shadow: 5px 5px 12px black;
+    animation: spin .5s ease-out;
+}
+@keyframes spin {
+  from { transform: rotateX(80deg); }
+  to   { transform: rotateX(0deg); }
+}
+h2 {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    font-size: 1em;
+}
+
+p {
+    margin-bottom: 0;
+    text-shadow: 0 0 15px black;
+}
+
+.cmd {
+    color: orange;
+}
+
+.btn {
+    color: orange;
+    display: inline;
+    background-color: rgba(100,100,100,0.5);
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.all {
+    color: lime;
+}
+.adm {
+    color: lime;
+}
+
+
+.card {
+    padding: 10px;
+    margin: auto;
+    margin-top: 50px;
+    color: white;
+    font-family: Arial;
+    font-size: 2em;
+    outline: none;
+    border: 2px solid rgba(200,200,200, 0.2);
+
+    width: 90%;
+
+    border-radius: 30px;
+    box-shadow: inset 0px 0px 20px rgba(50,50,50, 0.5), 8px 8px 10px rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px) brightness(95%);
+
+    cursor: pointer;
+    overflow: hidden;
+
+    transition: transform .1s ease-in;
+}
+.card:hover {
+    transform: scale(1.03);
+}
+
+footer {
+    width: 40%;
+    margin: auto;
+    font-size: 2em;
+}
+h3 {
+    text-shadow: 1px 1px 1px black;
+    margin: 0;
+    color: orange;
+}
+
+.l {
+    text-shadow: 1px 1px 5px black;
+    margin-right: 30px;
+    color: white;
+}
+.l:visited {
+    color: white;
+}
+    </style>
 </head>
-<header>
-    <h1 class="title">PlovDev</h1>
-</header>
 <body>
-<p></p>
+<header>
+    <h1 class="tur">TradingBot</h1>
+</header>
 
-<span>
-<nav>
-    <label>
-        Навигация:
-        <input placeholder="Ищите, и найдете">
-    </label>
-    <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="https://bf.ru">Business farm</a></li>
-        <li><a href="about.html">О нас</a></li>
-        <li><a href="blog.html">Блог</a></li>
-        <li><a href="apps.html">Проекты</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="fitbacks.html">Отзывы</a></li>
-        <li><a href="konfs.html">Политика конфиденциальности</a></li>
-    </ul>
-</nav>
-
-    <div>
-        <h1>
-            Главное
-        </h1>
-        <h2>
-            Мы планируем начать разработку BusinessFarm.ru 24-25 июня 2025 года.
-        </h2>
-        <p>
-            Планируеться сделать хотя бы основу будущего сайта, а так же наброски бекенда.
-        </p>
-        <p>
-            На разработку мы планиуем потратить +- месяц.
-        </p>
-        <h2>
-            BombSim вошел в топ самых лучших проограм-симуляторов 2025года.
-        </h2>
-        <p>
-            Буквально за несколько дней этот проект ворвался в топ, и стал лучшем в своем роде,
-        </p>
-        <p>
-            а всему причиной стала хорошо проработанный UI/UX и тематика.
-        </p>
-        <h2>
-            На подходе у PlovDev новый симулятор барабанов - DrumSim.
-        </h2>
-        <p>
-            В эту игру можно будет поиграть через неопределенное время, как говорят в PlovDev -
-        </p>
-        <p>
-            эта игра поможет вам почувствовать вас барабанщиком любимой группы.
-        </p>
+<div class="container">
+    <div class="card">
+        <h2 class="cmd">/start</h2>
+        <p>Запускает процесс регистрации. Регаться можно только 1 раз.</p>
+        <h2>Могут пользоваться: <q class="all">Все</q></h2>
     </div>
-</span>
 
-<div class="footer">
-    <h1>
-        Подробнее
-    </h1>
-    <p>
-        <a href="https://businessfarm.ru">Business Farm</a> - это сайт, предоставляющий B2B, B2C фриланс услуги типа разработки приложений или сайтов.
-        Но как мы уже сказали - сайт только начнут разрабатывать, т.е. он еще не готов даже для посищения.
-    </p>
-    <p>
-        <b>BombSim - это симулятор бомбы CS:GO.</b> Недавно вышла вторая версия этой легендарной игры. Вот что сказал наш лучший гейм-критик:
-        - <q>Новая Бомбсим имба.</q> И не просто так, ведь вторая версия получилась действительно имбовой, вот немногие улучшения:
-        <p><b>1. Добавлен раздел помощи</b> - теперь вы можете посмотреть туда, если вдруг что то не понятно.</p>
-        <p><b>2. Добавлено 4 языка и 5 шрифтов</b> - теперь симулятор отлично локализирован, и его можно кастомизировать.</p>
-        <p><b>3. Добавлны искры</b> - это добавляет живости и игтерактивности в симулятор.</p>
-        <p><b>4. Исправлено большинство багов</b> - теперь играть стало еще удобнее!</p>
-        <p><b>5. Дополнительные настройки и улучшения.</b></p>
-    </p>
-    <p>
-        <b>DrumSim уже на подходе.</b> Это значит что скоро можно будет оторваться по полной и насладиться крутыми битами,
-        а так же почувствовать себя барабанщиком любимой группы.
-    </p>
-    <h1>
+    <div class="card">
+        <h2 class="cmd">/help</h2>
+        <p>Показать пользователю список доступных команд и кнопок.</p>
+        <h2>Могут пользоваться: <q class="all">Все</q></h2>
+    </div>
 
-    </h1>
+    <div class="card">
+        <h2 class="btn">Позиции</h2>
+        <p>Показать пользователю список открытых позиций.</p>
+        <h2>Могут пользоваться: <q class="all">Все</q></h2>
+    </div>
 
+    <div class="card">
+        <h2 class="btn">История сделок</h2>
+        <p>Показать пользователю историю его торговли.</p>
+        <h2>Могут пользоваться: <q class="all">Все</q></h2>
+    </div>
+
+    <div class="card">
+        <h2 class="btn">Мой реферальный код</h2>
+        <p>Показать пользователю его реферальный код, чтобы он мог приглашать пользователей и получать за это
+            вознаграждение.</p>
+        <p>При приглашении 10 пользователей и когда каждый из них по 50 позиций, он может запросить награду</p>
+        <h2>Могут пользоваться: <q class="all">Все</q></h2>
+    </div>
+
+    <div class="card">
+        <h2 class="cmd">/admin</h2>
+        <p>Актирует меню с кнопками-командами для админов.</p>
+        <h2>Могут пользоваться: <q class="adm">admin</q></h2>
+    </div>
+
+    <div class="card">
+        <h2 class="btn">Шаблоны</h2>
+        <p>Показать список доступных для общения шаблонов.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+
+    <div class="card">
+        <h2 class="btn">Создать шаблон</h2>
+        <p>Создать новый шаблон сообщений или полностью изменить существующий.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+
+    <div class="card">
+        <h2 class="btn">Редактировать шаблон</h2>
+        <p>Отредактировать готовый шаблон.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+    <div class="card">
+        <h2 class="btn">Удалить шаблон</h2>
+        <p>Удалить шаблон из базы по названию.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+    <div class="card">
+        <h2 class="btn">Список шаблонов</h2>
+        <p>Показать список доступных для общения шаблонов.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+
+
+    <div class="card">
+        <h2 class="btn">Торговля</h2>
+        <p>Покажет меню с кнопками для настройки торговли</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+
+
+    <div class="card">
+        <h2 class="btn">Группы</h2>
+        <p>Показывает меню с кнопками для настройки каждой из групп.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+
+    <div class="card">
+        <h2 class="btn">Общая</h2>
+        <p>Группа куда изначально попадает пользователь после регистрации.</p>
+        <p>Есть еще группы: только скальп и только ручные сигналы</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+
+    <div class="card">
+        <h2 class="btn">Стоп в профит</h2>
+        <p>Настроить стоп в профит для группы</p>
+        <p>Есть еще группы: только скальп и только ручные сигналы</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+    <div class="card">
+        <h2 class="btn">Настройки тейк профитов</h2>
+        <p>Настроить тейк профиты для группы.</p>
+        <p>Есть еще группы: только скальп и только ручные сигналы</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+    <div class="card">
+        <h2 class="btn">Удалить пользователя из группы</h2>
+        <p>Переместит пользователя в общую группу. Это работает аналогично и с другими группами, поэтому рассматриваем
+            только 1 группу</p>
+        <p>Возможно сразу удалить несколько человек.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+    <div class="card">
+        <h2 class="btn">Добавить пользователя в группу</h2>
+        <p>Переместит пользователя в группу. Это работает аналогично и с другими группами, поэтому рассматриваем только
+            1 группу</p>
+        <p>Возможно сразу добавить несколько человек.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+
+    <div class="card">
+        <h2 class="btn">Отменить лимитные ордера</h2>
+        <p>Отменяет лимитные ордера по паре которую вы введете(бот запросит сам).</p>
+        <p>Применяется глобально ко всему и для всех</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+    <div class="card">
+        <h2 class="btn">Установить канал</h2>
+        <p>Установить канал откуда будут браться ручными сигналы.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+    <div class="card">
+        <h2 class="btn">Установить скальп-канал</h2>
+        <p>Установить канал откуда будут браться сигналы по скальпу.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+
+
+    <div class="card">
+        <h2 class="btn">Управление</h2>
+        <p>Покажет меню с кнопками для управления пользователями и админами.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+
+
+    <div class="card">
+        <h2 class="btn">Добавить админа</h2>
+        <p>Добавить админа. Бот запросит у вас tgID будущего администратора и его роль. Роль может быть либо
+            <q>admin</q>(максимальный уровень, либо <q>moder</q>)</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+    <div class="card">
+        <h2 class="btn">Удалить админа</h2>
+        <p>Удаляет админа из бота. Бот запросит tgId админа которого надо удалить.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+    <div class="card">
+        <h2 class="btn">Список пользователей</h2>
+        <p>Скинет exel таблицу со всеми пользователями которые есть в боте.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+    <div class="card">
+        <h2 class="btn">Удалить пользователя</h2>
+        <p>Полностью удаляет пользователя из бота, и прекращает его обрабатывать. Бот запросит tgId этого
+            пользователя</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+
+    <div class="card">
+        <h2 class="btn">Прочее</h2>
+        <p>Покажет меню где находятся прочие команды.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+
+    <div class="card">
+        <h2 class="btn">Заявки на регистрацию</h2>
+        <p>Скинет нерассмотренные запросы на регистрацию пользователей.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+
+    <div class="card">
+        <h2 class="btn">Реферальные запросы</h2>
+        <p>Скинет нерассмотренные реферальные запросы пользователей.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+
+
+    <div class="card">
+        <h2 class="btn">Отправить сообщение</h2>
+        <p>Начнет процедуру для отправки сообщений всем или по выбранным UID. Шаблоном или текстом.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+
+
+    <div class="card">
+        <h2 class="cmd">/setToken новый токен</h2>
+        <p>Меняет токен бота. Требуется перезагрузка сервера после смены.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+    <div class="card">
+        <h2 class="cmd">/editUser UID</h2>
+        <p>Редактирует пользователя по выбранному UID.</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+    <div class="card">
+        <h2 class="cmd">/changeAdminRole tgId role</h2>
+        <p>Меняет админу роль. Нужно указать tgID админу у которого будем менять роль и его новую роль.</p>
+        <p>Роли бывают <q>admin</q> и <q>moder</q></p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
+
+    <div class="card">
+        <h2 class="cmd">/addUser tgId language username</h2>
+        <p>Добавить нового пользователя в бота.</p>
+        <p>Нужно указать начальные значения такие как tgId, язык и userName(без '@')</p>
+        <h2>Могут пользоваться: <q class="all">admin</q></h2>
+    </div>
 </div>
 
-</body>
 <footer>
-    <span>
-        <div class="footDiv">
-            <h3>
-               Контакты
-            </h3>
-            <li><a href="https://t.me/Vkusny_Plovchik">Плов</a></li>
-<li><a href="https://t.me/Empty_Error404er">Вантуз</a></li>
-<li><a href="https://t.me/ricercatore_NLO">Доктор ЧМА</a></li>
-<li><a href="https://t.me/x_SilverAxe_x">Арсик</a></li>
-<li><a href="https://t.me/suiryyu">ДЕмОн</a>
-        </div>
-
-        <div class="footDiv">
-            <h3>
-                Лицензия
-            </h3>
-            <p>
-                Это личный сайт PlovDev, коммон,
-                какая здесь может быть лицензия?
-            </p>
-            <p>
-                На самом деле я просто незнаю че писать,
-            </p>
-            <p>
-                но вы все равно ничего не копируйте,
-                и не присваевайте себе всякие там права, а то мы обидимся.
-            </p>
-        </div>
-        <div class="footDiv">
-            <h3>
-                Ссылки
-            </h3>
-            <li><a href="https://russia-23.ru">Сайт росии23</a></li>
-            <li><a href="https://t.me/PlovDevOfficial">Наш ТГК</a></li>
-            <li><a href="https://t.me/businessfarm.ru">Business Farm</a></li>
-            <li><a href="https://t.me/Vkusny_Plovchik">Работать с нами</a></li>
-            <li><a href="mailto:PlovDev22880@gmail.com">Служба поддержки</a>
-        </div>
-    </span>
-    <p style="text-align: center;">
-        &copyPlovDev 2025. Все права защещены.
-    </p>
+    <p>Phone: <code>8-930-308-25-47</code></p>
+    <a class="l" href="https://t.me/Vkusny_Plovchik">telegram</a>
+    <a class="l" href="https://t.me/plovdev_official">Наш ТГК</a>
+    <h3>&copy;PlovDev 2025</h3>
 </footer>
+</body>
 </html>
